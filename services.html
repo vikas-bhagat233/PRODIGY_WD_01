@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills | My Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #5c6b76, #144986);
+      color: #333;
+      padding-top: 80px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 40px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    nav.scrolled {
+      background: rgba(0, 0, 0, 0.75);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-list li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s;
+    }
+
+    .nav-list li a:hover {
+      background-color: rgba(255,255,255,0.3);
+      color: #000;
+    }
+
+    .skills-section {
+      text-align: center;
+      padding: 100px 20px 60px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .skills-section h1 {
+      font-size: 40px;
+      color: #222;
+      margin-bottom: 40px;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .skill-card {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .skill-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .skill-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .skills-section h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="logo">MyBrand</div>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Skills</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <h1>What I'm Learning</h1>
+    <div class="skill-grid">
+      <div class="skill-card">
+        <h3>💻 HTML & CSS</h3>
+        <p>Building responsive and accessible layouts using modern HTML5 and CSS3 techniques.</p>
+      </div>
+      <div class="skill-card">
+        <h3>⚙️ JavaScript</h3>
+        <p>Learning DOM manipulation, event handling, ES6+ syntax, and creating interactive features.</p>
+      </div>
+      <div class="skill-card">
+        <h3>⚛️ React.js</h3>
+        <p>Exploring React for building dynamic user interfaces and component-based applications.</p>
+      </div>
+      <div class="skill-card">
+        <h3>🌐 Git & GitHub</h3>
+        <p>Practicing version control, open-source collaboration, and maintaining public repositories.</p>
+      </div>
+      <div class="skill-card">
+        <h3>📦 Node.js & MongoDB</h3>
+        <p>Learning backend development and databases to create full-stack applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

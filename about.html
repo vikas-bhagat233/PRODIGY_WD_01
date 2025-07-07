@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | My Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #68787c, #2b87d2);
+      color: #333;
+      padding-top: 80px;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 40px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    nav.scrolled {
+      background: rgba(0, 0, 0, 0.75);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-list li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s;
+    }
+
+    .nav-list li a:hover {
+      background-color: rgba(255,255,255,0.3);
+      color: #000;
+    }
+
+    .about {
+      max-width: 1100px;
+      margin: auto;
+      padding: 100px 20px 60px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .about-text {
+      flex: 1 1 500px;
+    }
+
+    .about-text h1 {
+      font-size: 40px;
+      color: #222;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .about-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .about-image img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .about-text h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="logo">MyBrand</div>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Skills</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-image">
+      <img src="https://images.sftcdn.net/images/t_app-cover-s,f_auto/p/e76d4296-43f3-493b-9d50-f8e5c142d06c/2117667014/boys-profile-picture-screenshot" alt="Profile Image">
+    </div>
+    <div class="about-text">
+      <h1>Hello, I'm Vikas 👋</h1>
+      <p>I’m an aspiring full-stack web developer currently learning how to build modern, responsive websites and applications using HTML, CSS, JavaScript, React, Node.js, and MongoDB. I enjoy creating user-friendly digital experiences that are both functional and visually appealing.</p>
+      <p>I'm passionate about clean code, creative problem-solving, and continuously expanding my knowledge to grow as a developer in this fast-evolving tech world.</p>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

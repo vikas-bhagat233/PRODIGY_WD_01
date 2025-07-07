@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | My Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #98b6ef, #0d5ca7);
+      padding-top: 80px;
+      color: #333;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+      transition: 0.3s;
+    }
+
+    nav.scrolled {
+      background: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-list li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s;
+    }
+
+    .nav-list li a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #000;
+    }
+
+    .contact {
+      max-width: 700px;
+      margin: 100px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .contact h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .contact p {
+      font-size: 18px;
+      margin: 12px 0;
+      color: #444;
+    }
+
+    .contact a {
+      color: #3366cc;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .contact {
+        margin: 80px 20px;
+        padding: 20px;
+      }
+
+      .contact h1 {
+        font-size: 28px;
+      }
+
+      .contact p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="logo">MyBrand</div>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Skills</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="contact">
+    <h1>Contact Me</h1>
+    <p>Email: <a href="mailto:yourname@example.com">XXXYYYZZZ554@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919876543210">+91 0022556699</a></p>
+    <p>Instagram: <a href="https://instagram.com/yourhandle" target="_blank">@xxxyyyzzz_089</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/XXXYYY-ZZZ233</a></p>
+  </section>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>

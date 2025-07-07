@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | My Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #55585c, #161682);
+      color: #333;
+      padding-top: 80px;
+    }
+    nav {
+      position: fixed;
+      top: 0; width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+      z-index: 999;
+    }
+    nav.scrolled {
+      background: rgba(0, 0, 0, 0.75);
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    .nav-list li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s;
+    }
+    .nav-list li a:hover {
+      background-color: rgba(255,255,255,0.3);
+      color: #000;
+    }
+
+    .portfolio {
+      text-align: center;
+      padding: 100px 20px 60px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .portfolio h1 {
+      font-size: 40px;
+      margin-bottom: 40px;
+      color: #222;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .portfolio-item {
+      background: #fff;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .portfolio-item h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .portfolio-item p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="logo">MyBrand</div>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Skills</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio">
+    <h1>My Projects</h1>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <h3>🧘‍♂️ Meditation Website</h3>
+        <p>A beautiful meditation website built using HTML, CSS, and JavaScript with interactive features. Includes timer, relaxing music, motivational quotes, and a clean UI.</p>
+      </div>
+      <div class="portfolio-item">
+        <h3>🐶 Pet Adoption App</h3>
+        <p>Created a cross-platform pet adoption system using Flutter and Dart. Backend integration done with Firebase and MongoDB. Users can adopt pets, browse listings, and manage their adoptions.</p>
+      </div>
+      <div class="portfolio-item">
+        <h3>🌍 Tourist Places Website</h3>
+        <p>A fully responsive tourism website made with HTML, CSS, and JavaScript. Integrated with MySQL to manage tourist data and user bookings.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>

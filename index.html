@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | My Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #333;
+      padding-top: 80px;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 40px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+      z-index: 999;
+    }
+    nav.scrolled {
+      background: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+    }
+    ul.nav-list {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    .nav-list li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .nav-list li a:hover {
+      background-color: rgba(255,255,255,0.3);
+      color: #000;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 20px;
+    }
+    .hero h1 { font-size: 48px; }
+    .hero p { font-size: 20px; margin-top: 10px; }
+
+    /* Blog Section */
+   .blogs {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #dfe9f3, #765003);
+  text-align: center;
+}
+
+    .blogs h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .blog-card {
+      background: #f7f9fc;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+    .blog-card h3 {
+      font-size: 20px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+    .blog-card p {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="logo">MyBrand</div>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Skills</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Welcome to My Website</h1>
+      <p>Discover creativity, innovation, and development.</p>
+    </div>
+  </section>
+
+ <!-- Blog Section -->
+<section class="blogs" style="background: linear-gradient(to right, #dfe9f3, #ffffff);">
+  <h2>Latest Blog Posts</h2>
+  <div class="blog-container">
+    <div class="blog-card">
+      <h3>🌟 The Power of Consistency in Learning</h3>
+      <p>Learn how dedicating just 30 minutes a day can drastically improve your development skills.</p>
+    </div>
+    <div class="blog-card">
+      <h3>💡 UI/UX Trends of 2025</h3>
+      <p>Explore the newest design trends that are dominating modern websites and mobile apps this year.</p>
+    </div>
+    <div class="blog-card">
+      <h3>🚀 Deploy Your Site with GitHub Pages</h3>
+      <p>A simple guide to hosting and deploying your static website for free using GitHub Pages.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Scroll Script -->
+  <script>
+    window.addEventListener("scroll", () => {
+      document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
